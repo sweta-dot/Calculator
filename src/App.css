@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.keys {
+  background: #f1f3f4;
+  color: #202124;
+  border: 1px solid #f1f3f4;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  margin: 2px;
+  width: 24%;
+  cursor: pointer;
+}
+
+.operator {
+  background: #dadce0;
+  border: 1px solid #dadce0;
+}
+
+.calculator {
+  margin: 0 33%;
+}
+.expressions-section{
+  height: 80px;
+  border: 24px solid #f1f3f4;
+  border-radius: 12px;
+  text-align: end;
+}
