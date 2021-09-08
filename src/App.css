@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.button {
+  display: flex;
+}
+
 .keys {
   background: #f1f3f4;
   color: #202124;
@@ -22,9 +26,19 @@
 .calculator {
   margin: 0 33%;
 }
+
 .expressions-section{
   height: 80px;
   border: 24px solid #f1f3f4;
   border-radius: 12px;
   text-align: end;
+}
+
+.first {
+  width: 90%;
+}
+
+.equals {
+  padding: 73px 20px;
+  width: 50px;
 }

@@ -5,7 +5,12 @@ class KeypadComponent extends Component {
     render() {
         return (
             <div className="button">
-                <div>
+                <div className="first">
+                    <button className="keys operator" name="÷" onClick={e => this.props.onClick(e.target.name)}>÷</button>
+                    <button className="keys operator" name="×" onClick={e => this.props.onClick(e.target.name)}>x</button>
+                    <button className="keys operator" name="-" onClick={e => this.props.onClick(e.target.name)}>-</button>
+                    <button className="keys operator" name="+" onClick={e => this.props.onClick(e.target.name)}>+</button><br />
+
                     <button className="keys" name="9" onClick={e => this.props.onClick(e.target.name)}>9</button>
                     <button className="keys" name="8" onClick={e => this.props.onClick(e.target.name)}>8</button>
                     <button className="keys" name="7" onClick={e => this.props.onClick(e.target.name)}>7</button>
@@ -21,13 +26,8 @@ class KeypadComponent extends Component {
                     <button className="keys" name="." onClick={e => this.props.onClick(e.target.name)}>.</button>
                     <button className="keys" name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button><br />
 
-
-                    <button className="keys operator" name="÷" onClick={e => this.props.onClick(e.target.name)}>÷</button>
-                    <button className="keys operator" name="×" onClick={e => this.props.onClick(e.target.name)}>x</button>
-                    <button className="keys operator" name="-" onClick={e => this.props.onClick(e.target.name)}>-</button>
-                    <button className="keys operator" name="+" onClick={e => this.props.onClick(e.target.name)}>+</button><br />
                 </div>
-                <div>
+                <div className="second">
                     <button className="keys equals" name="=" onClick={e => this.props.onClick(e.target.name)}>=</button>
                 </div>
             </div>
