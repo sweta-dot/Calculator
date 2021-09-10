@@ -13,14 +13,28 @@ class Calculator extends Component {
 
     calculate = function (s) {
         s = s.join("");
-
-        const tokens = s.match(/|\÷|\×|\)|\-|\+|\d+/g).filter(t => t !== '');
-
+        const tokens = s.match(/\(|\)|\÷|\×|\-|\+|\d+/g).filter(t => t !== '');
+        tokens.unshift("(");
+        tokens.push(")");
         const stack = [];
 
         for (let i = 0; i < tokens.length; i++) {
             const token = tokens[i];
+            if (token === ")") {
+                const subExp = [];
+                let curr = stack.pop();
+
+                while (curr !== "(") {
+                    subExp.unshift(curr);
+                    curr = stack.pop();
+                }
+
+                const subExpValue = this.evaluate(subExp);
+                stack.push(subExpValue);
+
+            } else {
                 stack.push(token);
+            }
         }
         return stack.pop();
     }

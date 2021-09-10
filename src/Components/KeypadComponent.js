@@ -28,6 +28,8 @@ class KeypadComponent extends Component {
 
                 </div>
                 <div className="second">
+                    <button className="keys operator" name="(" onClick={e => this.props.onClick(e.target.name)}>(</button><br />
+                    <button className="keys operator" name=")" onClick={e => this.props.onClick(e.target.name)}>)</button><br />
                     <button className="keys equals" name="=" onClick={e => this.props.onClick(e.target.name)}>=</button>
                 </div>
             </div>
